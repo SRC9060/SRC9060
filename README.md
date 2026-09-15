@@ -171,11 +171,11 @@ A comprehensive real-time service platform designed for technician booking, inte
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg">
-  <img src="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg" width="95%" alt="Animated GitHub contribution snake">
-</picture>
+<img
+  src="https://raw.githubusercontent.com/SRC9060/SRC9060/output/contribution-snake.svg"
+  width="95%"
+  alt="Animated GitHub contribution snake"
+/>
 
 </div>
 

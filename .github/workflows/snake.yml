@@ -14,13 +14,19 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Generate contribution snake
-        uses: Platane/snk@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          github_user_name: SRC9060
-          outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=magenta
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=magenta
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Generate custom contribution snake
+        run: python .github/scripts/generate_snake.py
 
       - name: Publish snake to output branch
         uses: peaceiris/actions-gh-pages@v4
