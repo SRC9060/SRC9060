@@ -213,25 +213,21 @@ Future Institute of Engineering & Management · Aug 2023 – Present
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=SRC9060&show_icons=true&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&icon_color=8B5CF6&count_private=true" height="180" alt="GitHub stats">
+<img src="./profile/metrics.svg" width="96%" alt="GitHub metrics dashboard">
 
-<img src="https://streak-stats.demolab.com?user=SRC9060&theme=dark&background=0D1117&hide_border=true&ring=8B5CF6&fire=A78BFA&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=94A3B8" height="180" alt="GitHub streak">
+<br><br>
 
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SRC9060&layout=compact&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD" height="180" alt="Top languages">
+<img src="https://streak-stats.demolab.com?user=SRC9060&theme=dark&background=0D1117&hide_border=true&ring=8B5CF6&fire=A78BFA&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=94A3B8" width="90%" alt="GitHub contribution streak">
 
 </div>
 
 ---
 
-## GitHub Trophies
+## GitHub Trophies & Achievements
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=SRC9060&theme=onedark&no-frame=true&no-bg=true&margin-w=8&row=1&column=7" width="90%" alt="GitHub trophies">
+<img src="./profile/achievements.svg" width="94%" alt="GitHub achievements">
 
 </div>
 
@@ -241,7 +237,7 @@ Future Institute of Engineering & Management · Aug 2023 – Present
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=SRC9060&bg_color=0D1117&color=C4B5FD&line=8B5CF6&point=A78BFA&area=true&hide_border=true&custom_title=Contribution%20Activity" width="96%" alt="Contribution activity graph">
+<img src="./profile/activity.svg" width="96%" alt="GitHub contribution activity">
 
 </div>
 
@@ -252,13 +248,16 @@ Future Institute of Engineering & Management · Aug 2023 – Present
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg">
-  <img src="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg" width="92%" alt="GitHub contribution snake">
+  <source media="(prefers-color-scheme: dark)" srcset="./output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./output/github-snake.svg">
+  <img src="./output/github-snake.svg" width="92%" alt="Animated GitHub contribution snake">
 </picture>
 
-</div>
+<br>
 
+<sub>🟩 The snake travels across your contribution graph and eats the contribution cells.</sub>
+
+</div>
 ---
 
 ## Current Focus
