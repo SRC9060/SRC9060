@@ -5,14 +5,67 @@ import random
 import heapq
 
 def fetch_grid(username):
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers = {"Authorization": f"bearer {token}"}
+        query = """
+        query($userName:String!) {
+          user(login: $userName){
+            contributionsCollection {
+              contributionCalendar {
+                weeks {
+                  contributionDays {
+                    weekday
+                    contributionLevel
+                  }
+                }
+              }
+            }
+          }
+        }
+        """
+        r = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': {'userName': username}}, headers=headers)
+        if r.status_code == 200:
+            data = r.json()
+            if "data" in data and data["data"]["user"]:
+                weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+                
+                grid = [[] for _ in range(7)]
+                level_map = {
+                    "NONE": 0,
+                    "FIRST_QUARTILE": 1,
+                    "SECOND_QUARTILE": 2,
+                    "THIRD_QUARTILE": 3,
+                    "FOURTH_QUARTILE": 4
+                }
+                
+                for week in weeks:
+                    days = week["contributionDays"]
+                    # Usually 7 days, but can be less. We must align them by weekday.
+                    week_levels = {day["weekday"]: level_map.get(day["contributionLevel"], 0) for day in days}
+                    
+                    for weekday in range(7):
+                        if weekday in week_levels:
+                            grid[weekday].append(week_levels[weekday])
+                        else:
+                            # If it's a partial week at start/end of year, just append empty
+                            grid[weekday].append(0)
+                            
+                return grid
+                
+    # HTML Fallback
     url = f'https://github.com/users/{username}/contributions'
-    r = requests.get(url)
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+    }
+    r = requests.get(url, headers=headers)
     if r.status_code != 200:
-        raise Exception("Failed to fetch contributions")
+        raise Exception(f"Failed to fetch contributions: {r.status_code}")
     soup = BeautifulSoup(r.text, 'html.parser')
     tbody = soup.find('tbody')
     if not tbody:
-        raise Exception("No tbody found")
+        raise Exception("No tbody found in the contribution graph HTML")
     rows = tbody.find_all('tr')
     
     grid = []
