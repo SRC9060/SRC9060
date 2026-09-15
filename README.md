@@ -9,7 +9,6 @@
 <br>
 
 <img src="https://img.shields.io/badge/B.Tech-Information%20Technology-7C3AED?style=for-the-badge&labelColor=0D1117" alt="B.Tech Information Technology">
-<img src="https://img.shields.io/badge/CGPA-7.64-A78BFA?style=for-the-badge&labelColor=0D1117" alt="CGPA 7.64">
 <img src="https://img.shields.io/badge/Kolkata-West%20Bengal-8B5CF6?style=for-the-badge&labelColor=0D1117" alt="Kolkata, West Bengal">
 
 <br><br>
@@ -154,21 +153,6 @@ A comprehensive real-time service platform designed for technician booking, inte
 
 ---
 
-## Education
-
-**B.Tech in Information Technology**  
-Future Institute of Engineering & Management  
-*Aug 2023 – Present*  
-- **CGPA (up to 6th Semester):** 7.64
-
-**Higher Secondary Education**  
-- **Percentage:** 73.80%
-
-**Secondary Education**  
-- **Percentage:** 89.83%
-
----
-
 ## Achievements & Certifications
 
 <div align="center">
@@ -183,49 +167,15 @@ Future Institute of Engineering & Management
 
 ---
 
-## GitHub Analytics
-
-<div align="center">
-
-<img src="./profile/metrics.svg" width="90%" alt="GitHub Metrics">
-
-</div>
-
----
-
-## GitHub Trophies / Achievements
-
-<div align="center">
-
-<img src="./profile/achievements.svg" width="90%" alt="GitHub Achievements">
-
-</div>
-
----
-
-## Contribution Activity
-
-<div align="center">
-
-<img src="./profile/activity.svg" width="90%" alt="GitHub Contribution Activity">
-
-</div>
-
----
-
-## Contribution Snake
+## 🐍 Contribution Snake
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg">
-  <img src="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg" width="90%" alt="Animated GitHub contribution snake">
+  <img src="https://raw.githubusercontent.com/SRC9060/SRC9060/output/github-contribution-grid-snake.svg" width="95%" alt="Animated GitHub contribution snake">
 </picture>
-
-<br>
-
-<sub>🟩 The snake travels across the contribution graph eating the cells. <i>Generated automatically via GitHub Actions.</i></sub>
 
 </div>
 
