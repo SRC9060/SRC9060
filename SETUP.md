@@ -1,49 +1,13 @@
-# SRC9060 GitHub Profile — Setup
+# GitHub Profile Setup Guide
 
-This package combines the premium README design with two self-hosted GitHub Actions: one for a local metrics dashboard and one for the animated contribution snake. This avoids relying on the broken external GitHub stats, trophy, and activity-graph image services shown in the previous version.
+Follow these steps to fully activate your new GitHub profile:
 
-## 1. Repository
+1. Confirm your repository is named exactly `SRC9060/SRC9060` and is set to **Public**.
+2. Push all the local files to the `main` branch.
+3. Open your repository on GitHub and navigate to the **Actions** tab. (If prompted, enable GitHub Actions for this repository).
+4. On the left sidebar, click on **Generate Contribution Snake** and then click the **Run workflow** button.
+5. Next, click on **GitHub Metrics** and click the **Run workflow** button.
+6. Wait for both workflows to finish successfully.
+7. Return to your main GitHub profile page and refresh to see the newly generated metrics and the automatically generated contribution snake animation!
 
-Use your public profile repository:
-
-`https://github.com/SRC9060/SRC9060`
-
-The repository name must match the GitHub username exactly.
-
-## 2. Replace your current profile files
-
-Copy this package into the `SRC9060/SRC9060` repository. It contains:
-
-```text
-README.md
-SETUP.md
-.github/workflows/metrics.yml
-.github/workflows/snake.yml
-```
-
-## 3. Push
-
-```bash
-git add .
-git commit -m "Fix GitHub profile analytics and snake"
-git push
-```
-
-## 4. Run both workflows once
-
-On GitHub open **Actions** and run:
-
-- **Generate GitHub Metrics**
-- **Generate Contribution Snake**
-
-The metrics workflow commits `profile/metrics.svg`, `profile/achievements.svg`, and `profile/activity.svg` into your repository. The snake workflow publishes the animated snake SVGs to the `output` branch.
-
-## 5. Why the empty sections are fixed
-
-The previous README depended on several third-party image endpoints. If one of those services is unavailable, GitHub shows only the broken-image alt text. The updated profile generates the important visuals inside your own repository instead.
-
-The snake is the actual animated contribution-grid game: it moves across your GitHub contribution cells and eats them.
-
-## 6. Important
-
-You need to run each workflow once after pushing. After that, the scheduled workflows refresh the assets automatically.
+> **Note:** The animated snake and metrics graphics are generated automatically by GitHub Actions. They are scheduled to run daily to keep your profile updated.
