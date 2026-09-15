@@ -5,13 +5,16 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
         with:
           filename: profile/metrics.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -19,8 +22,12 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           config_timezone: Asia/Kolkata
+          output_action: commit
+          committer_branch: main
+          committer_message: "chore: update GitHub metrics"
 
-      - uses: lowlighter/metrics@latest
+      - name: Generate GitHub Achievements
+        uses: lowlighter/metrics@latest
         with:
           filename: profile/achievements.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,8 +35,12 @@ jobs:
           plugin_achievements: yes
           plugin_achievements_display: detailed
           plugin_achievements_threshold: C
+          output_action: commit
+          committer_branch: main
+          committer_message: "chore: update GitHub achievements"
 
-      - uses: lowlighter/metrics@latest
+      - name: Generate Contribution Activity
+        uses: lowlighter/metrics@latest
         with:
           filename: profile/activity.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,3 +49,6 @@ jobs:
           plugin_activity_limit: 5
           plugin_activity_days: 14
           plugin_activity_filter: all
+          output_action: commit
+          committer_branch: main
+          committer_message: "chore: update GitHub activity"
