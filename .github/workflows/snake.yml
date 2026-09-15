@@ -27,6 +27,8 @@ jobs:
 
       - name: Generate custom contribution snake
         run: python .github/scripts/generate_snake.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish snake to output branch
         uses: peaceiris/actions-gh-pages@v4
